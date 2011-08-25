@@ -8,7 +8,9 @@ Make sure that you have the [PHP Redis extension](https://github.com/owlient/php
 
 	require 'Juggernaut.php';
 	Juggernaut::init('127.0.0.1');
+	
 	// Simple message to one channel
 	Juggernaut::publish('channel1', 'this is my message');
+	
 	// Send an object to multiple channels
 	Juggernaut::publish(array('channel1', 'channel2'), array('this' => array('is' => 'data')));
